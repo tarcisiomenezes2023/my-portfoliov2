@@ -3,6 +3,20 @@ import Who from "./components/Who"
 import Work from "./components/Work"
 import Contact from "./components/Contact"
 import styled from "styled-components"
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    html, body {
+    height: 100%;
+    overflow: hidden;
+    }
+`
 
 const Container = styled.div`
   height: 100vh;
@@ -19,12 +33,15 @@ const Container = styled.div`
 
 function App() {
   return (
+  <>
+    <GlobalStyle />
     <Container>
       <Hero />
       <Who />
       <Work />
       <Contact />
     </Container>
+  </>
   )
 }
 
