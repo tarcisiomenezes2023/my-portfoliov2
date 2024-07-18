@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Sidebar from "./siderbar/Sidebar";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   height: 100px;
@@ -33,7 +35,10 @@ const Social = styled.img`
 const Navbar = () => {
   return (
     <Container>
-      <Name>Tarcísio Menezes</Name>
+      <Sidebar />
+      <motion.Name initial={{opacity: 0, scale: 0.5}} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} >
+        Tarcísio Menezes
+      </motion.Name>
       <SocialContainer>
         <a href="#"><Social src="./img/github1.png" alt="github" /></a>
         <a href="#"><Social src="./img/linkedin1.png" alt="linkedin" /></a>
