@@ -4,6 +4,7 @@ import Work from "./components/Work"
 import Contact from "./components/Contact"
 import styled from "styled-components"
 import { createGlobalStyle } from "styled-components"
+import "./App.css"
 
 const GlobalStyle = createGlobalStyle`
   * {
