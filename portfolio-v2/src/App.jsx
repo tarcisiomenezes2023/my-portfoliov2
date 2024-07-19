@@ -2,47 +2,24 @@ import Hero from  "./components/Hero"
 import Who from "./components/Who"
 import Work from "./components/Work"
 import Contact from "./components/Contact"
-import styled from "styled-components"
-import { createGlobalStyle } from "styled-components"
-import "./App.css"
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-
-    html, body {
-    height: 100%;
-    overflow: hidden;
-    }
-`
-
-const Container = styled.div`
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: auto;
-  scrollbar-width: none;
-  color: white;
-  background-color: #00001b;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
+import Project1 from "./components/Project1"
+import Project2 from "./components/Project2"
+import Project3 from "./components/Project3"
+import Project4 from "./components/Project4"
+import "./app.scss"
 
 function App() {
   return (
-  <>
-    <GlobalStyle />
-    <Container>
-      <Hero />
-      <Who />
-      <Work />
-      <Contact />
-    </Container>
-  </>
+    <div>
+      <section> <Hero /> </section>
+      <section> <Who /> </section>
+      <section> <Work /> </section>
+      <section> <Project1 /> </section>
+      <section> <Project2 /> </section>
+      <section> <Project3 /> </section>
+      <section> <Project4 /> </section>
+      <section> <Contact /> </section>
+    </div>
   )
 }
 
