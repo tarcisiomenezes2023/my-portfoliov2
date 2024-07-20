@@ -1,5 +1,4 @@
 import Hero from "./components/Hero";
-import Who from "./components/Who";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Project1 from "./components/Project1";
@@ -12,7 +11,6 @@ function App() {
   return (
     <div className="app-container">
       <section> <Hero /> </section>
-      <section> <Who /> </section>
       <section> <Work /> </section>
       <section> <Project1 /> </section>
       <section> <Project2 /> </section>
