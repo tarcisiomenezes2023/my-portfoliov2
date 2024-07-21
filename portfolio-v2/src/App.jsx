@@ -10,13 +10,13 @@ import "./app.scss";
 function App() {
   return (
     <div className="app-container">
-      <section> <Hero /> </section>
-      <section> <Work /> </section>
-      <section> <Project1 /> </section>
+      <section id="Homepage"> <Hero /> </section>
+      <section id="Work"> <Work /> </section>
+      <section id="Projects"> <Project1 /> </section>
       <section> <Project2 /> </section>
       <section> <Project3 /> </section>
       <section> <Project4 /> </section>
-      <section> <Contact /> </section>
+      <section id="Contact"> <Contact /> </section>
     </div>
   );
 }

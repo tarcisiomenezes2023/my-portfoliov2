@@ -1,9 +1,21 @@
 const Links = () => {
+
+  const items = [
+    "Homepage",
+    "Work",
+    "Projects",
+    "Contact"
+  ]
+
   return (
     <div className="links">
-      LINKS
+      {items.map((item) => (
+        <a href={`#${item}`} key={item}>
+          {item}
+        </a>
+      ))}
     </div>
   )
 }
 
-export default Links
+export default Links;
