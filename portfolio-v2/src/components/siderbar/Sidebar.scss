@@ -30,6 +30,14 @@
 
             a {
                 font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: black;
+                transition: 0.2s;
+
+                &:hover {
+                    color: rgb(56, 56, 214);
+                }
             }
         }
     }
