@@ -1,9 +1,10 @@
 import "./Navbar.scss"
+import Sidebar from "./siderbar/Sidebar";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      {/* Sidebar */}
+      <Sidebar />
       <div className="wrapper">
         <span>Tarcísio Menezes</span>
         <div className="social">
