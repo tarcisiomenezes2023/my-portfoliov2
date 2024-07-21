@@ -1,6 +1,6 @@
 const Links = () => {
   return (
-    <div>
+    <div className="links">
       LINKS
     </div>
   )

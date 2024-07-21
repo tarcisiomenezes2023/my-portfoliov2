@@ -1,9 +1,15 @@
-const ToggleButton = () => {
+import PropTypes from 'prop-types';
+
+const ToggleButton = ({ setOpen }) => {
   return (
-    <button>
-      
+    <button onClick={() => setOpen(prev => !prev)}>
+      Toggle
     </button>
-  )
+  );
 }
 
-export default ToggleButton
+ToggleButton.propTypes = {
+  setOpen: PropTypes.func.isRequired,
+};
+
+export default ToggleButton;
