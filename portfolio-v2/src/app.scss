@@ -22,3 +22,45 @@ section {
     height: 100vh;
     scroll-snap-align: start;
 }
+
+@mixin SmallMobile {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin MidMobile {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 700px) {
+        @content;
+    }
+}
+
+@mixin SmallTablet {
+    @media (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin MidTablet {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
