@@ -1,17 +1,29 @@
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Navbar from "./Navbar";
-import Typewriter from "./Typewriter";
 import "./Hero.scss";
 
 const Hero = () => {
+  const [text] = useTypewriter({
+    words: [
+      "Passionate Fullstack Developer 💻",
+      "Turning Ideas into Dynamic Digital Experiences 💡",
+      "Dedicated to Building High-Performance Applications 💪",
+    ],
+    loop: true, 
+    typeSpeed: 70,
+    deleteSpeed: 30,
+  });
+
   return (
     <>
       <Navbar />
       <div className="hero">
         <div className="wrapper">
           <div className="textContainer">
-            <h2>Hello, I am</h2>
+            <h2>Hello 👋, I am</h2>
             <h1>Tarcísio Menezes</h1>
-            <h3><Typewriter text="Frontend and Backend developer" /></h3>
+            <span>{text} <Cursor cursorStyle='|' /></span>
+            
             <div className="buttons">
               <button>See the Latest Works</button>
               <button className="resume">Resume</button>
