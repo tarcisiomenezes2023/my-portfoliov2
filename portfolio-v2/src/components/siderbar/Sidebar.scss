@@ -9,6 +9,7 @@
     justify-content: center;
     background-color: white;
     color: black;
+    z-index: 1;
 
     .bg {
         position: absolute;
@@ -36,7 +37,7 @@
                 transition: 0.2s;
 
                 &:hover {
-                    color: rgb(56, 56, 214);
+                    color: rgb(49, 214, 154);
                 }
             }
         }
