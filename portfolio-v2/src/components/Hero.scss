@@ -47,6 +47,23 @@
                     color: white;
                     cursor: pointer;
                     font-weight: 300;
+
+                    ::after {
+                        content: "Web design";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: rgb(71, 215, 71);
+                        width: 0px;
+                        overflow: hidden;
+                        white-space: nowrap;
+
+                        &:hover {
+                            ::after {
+                                animation: moveText 0.5s;
+                            }
+                        }
+                    }
                 }
                 .resume {
                     background-color: rgb(49, 214, 154);
@@ -65,6 +82,13 @@
                 max-height: 450px;
                 max-width: 350px; 
                 object-fit: contain; 
+                animation: animate 2s infinite ease alternate;
+
+                @keyframes animate {
+                    to {
+                    transform: translateY(10px);
+                    }
+                }
             }
         }
     }
