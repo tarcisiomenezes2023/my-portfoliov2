@@ -75,27 +75,6 @@
                 font-size: 13px;
             }
         }
-
-        button {
-            width: 25vh;
-            font-size: 3vh;
-            padding: 10px;
-            border-radius: 7px;
-            color: white;
-            background: rgb(45, 160, 19);
-            font-weight: bolder;
-            transition: 0.5s;;
-
-            @include mobile {
-                font-size: 2vh;
-                width: 20vh;
-            }
-        }
-        button:hover {
-            color: rgba(255, 255, 255, 0.319);
-            background: rgb(73, 148, 72);
-            transform: scale(0.8);
-        }
     }
     .formContainer {
         flex: 1;

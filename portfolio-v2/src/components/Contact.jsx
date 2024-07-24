@@ -23,11 +23,6 @@ const Contact = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleDownloadCV = () => {
-    const cvUrl = 'https://drive.google.com/file/d/1nq6G591W14bUvLfGxgbcnVuuYX88o3G1/view?usp=sharing'; 
-    window.open(cvUrl, '_blank'); 
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -75,9 +70,6 @@ const Contact = () => {
           <span>+36 20 317 3408</span>
         </motion.div>
         <motion.div className='links' variants={variants}>
-          <motion.button variants={variants} className='CV' onClick={handleDownloadCV}>
-            Resume
-          </motion.button>
         </motion.div>
       </motion.div>
       <motion.div variants={variants} className='formContainer'>

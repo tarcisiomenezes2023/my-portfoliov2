@@ -3,93 +3,118 @@
     overflow: hidden;
     background-color: rgb(3, 2, 22);
     position: relative;
-    max-width: 1050px;
+    max-width: 1366px;
     margin: auto;
-
+  
     .wrapper {
-        max-width: 1366px;
+      max-width: 1000px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        max-width: 380px;
+  
+        h2 {
+          font-size: 30px;
+          color: white;
+        }
+        h1 {
+          color: rgb(67, 236, 174);
+          font-size: 45px;
+          font-weight: bolder;
+        }
+        span {
+          color: white;
+          font-size: 22px;
+        }
+  
+        .buttons {
+          display: flex;
+          gap: 20px;
+  
+          button {
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            font-weight: 300;
+            transition: 0.5s;
+          }
+
+          button:hover {
+            transform: scale(1.06);
+            background-color: white;
+            color: black;
+          }
+  
+          .resume {
+            background-color: rgb(49, 214, 154);
+            font-weight: 500;
+            transition: 1s;
+          }
+          .resume:hover {
+            background-color: rgb(33, 233, 56);
+            color: white;
+          }
+        }
+      }
+  
+      .imageContainer {
+        position: relative;
         height: 100%;
-        margin: auto;
-        display: flex; 
-        align-items: center; 
-        justify-content: space-between; 
-
-        .textContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 20px;
-            max-width: 380px;
-
-            h2 {
-                font-size: 30px;
-                color: white;
-            }
-            h1 {
-                color: rgb(67, 236, 174);
-                font-size: 45px;
-                font-weight: bolder;
-            }
-            span {
-                color: white;
-                font-size: 22px;
-            }
-
-            .buttons {
-                display: flex;
-                gap: 20px;
-
-                button {
-                    padding: 20px;
-                    border: 1px solid white;
-                    border-radius: 10px;
-                    background-color: transparent;
-                    color: white;
-                    cursor: pointer;
-                    font-weight: 300;
-
-                    ::after {
-                        content: "Web design";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        color: rgb(71, 215, 71);
-                        width: 0px;
-                        overflow: hidden;
-                        white-space: nowrap;
-
-                        &:hover {
-                            ::after {
-                                animation: moveText 0.5s;
-                            }
-                        }
-                    }
-                }
-                .resume {
-                    background-color: rgb(49, 214, 154);
-                    font-weight: 500;
-                }
-            }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        .aura {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 110%;
+          height: 90%;
+          background: radial-gradient(circle, rgb(49, 214, 154), rgba(0, 0, 0, 0));
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          animation: pulsate 2s infinite;
+          pointer-events: none;
         }
-
-        .imageContainer {
-            height: 100%;
-            display: flex;
-            align-items: center; 
-            justify-content: center; 
-
-            img {
-                max-height: 450px;
-                max-width: 350px; 
-                object-fit: contain; 
-                animation: animate 2s infinite ease alternate;
-
-                @keyframes animate {
-                    to {
-                    transform: translateY(10px);
-                    }
-                }
-            }
+  
+        img {
+          max-height: 450px;
+          max-width: 350px;
+          object-fit: contain;
+          animation: animate 2s infinite ease alternate;
         }
+  
+        @keyframes animate {
+          to {
+            transform: translateY(20px);
+          }
+        }
+  
+        @keyframes pulsate {
+          0% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.7;
+          }
+          50% {
+            transform: translate(-50%, -50%) scale(1.1);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.7;
+          }
+        }
+      }
     }
-}
+  }
