@@ -61,7 +61,7 @@
         }
         h2 {
 
-            color: white;
+            color: rgb(49, 214, 154);
             @include SmallMobile {
                 font-size: 17px;
             }
@@ -108,9 +108,17 @@
             button {
                padding: 20px;
                border: none;
-               background-color: orange;
+               background-color: rgb(49, 214, 154);
                cursor: pointer;
                font-weight: 500;
+               transition: 0.5s;
+               font-weight: 700;
+
+               &:hover {
+                background-color: rgb(43, 201, 37);
+                color: white;
+                transform: scale(1.01);
+               }
 
                @include mobile {
                 padding: 10px;
