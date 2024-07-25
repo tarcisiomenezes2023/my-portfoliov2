@@ -1,0 +1,26 @@
+.container {
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    position: relative;
+    max-width: 1366px;
+    margin: auto;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .TextContainer {
+            flex: 1;
+        }
+
+        .ThreeContainer {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
