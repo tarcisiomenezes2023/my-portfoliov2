@@ -55,7 +55,7 @@ const ColoredBox = () => {
   return (
     <mesh 
       ref={meshRef} 
-      scale={[3, 3, 3]} 
+      scale={[2.5, 2.5, 2.5]} 
       onPointerDown={handlePointerDown} 
       onPointerUp={handlePointerUp}
     >
@@ -69,20 +69,32 @@ const ColoredBox = () => {
 
 const Work = () => {
   return (
+    <>
+    <div className="textH1"><h1>Work Experience and Skills</h1></div>
     <div className="container">
       <div className="wrapper">
         <div className="TextContainer">
           <div className="Job1">
-            <h2></h2>
+            <h2>Frontend Developer Intern</h2>
+            <h5>ENGAGEathon | Remote/Freelancing</h5>
+            <h6>https://www.f6s.com/company/engageathon/
+            From Mar 2024 – Jun 2024</h6>
           </div>
           <div className="Job2">
-            <h2></h2>
+            <h2>Sales and IT support</h2>
+            <h5>Mega Mix Construção | Petrolina, Brazil</h5>
+            <h6>https://www.instagram.com/mixdaconstrucaopnz/
+            From Nov 2019 – Jul 2022</h6>
           </div>
           <div className="Job3">
-            <h2></h2>
+            <h2>Sales Assistant</h2>
+            <h5>Embalando Festas | Petrolina, Brazil</h5>
+            <h6>https://embalandofestas.com.br/ From Jan 2019 - Nov 2019</h6>
           </div>
           <div className="Job4">
-            <h2></h2>
+          <h2>IT Support Intern</h2>
+            <h5>Hospital Memorial Petrolina | Petrolina, Brazil</h5>
+            <h6>https://hmp.com.br/ From Jan 2017 – Jan 2018</h6>
           </div>
         </div>
         <div className="ThreeContainer">
@@ -95,6 +107,7 @@ const Work = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
