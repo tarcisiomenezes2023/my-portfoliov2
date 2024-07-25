@@ -1,5 +1,18 @@
+.textH1 {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: rgb(49, 214, 154);
+        font-size: 40px;
+        font-weight: bold;
+    
+    }
+}
 .container {
-    height: calc(100vh - 50px);
+    height: calc(100vh);
     overflow: hidden;
     position: relative;
     max-width: 1366px;
