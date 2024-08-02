@@ -1,0 +1,31 @@
+.portfolio {
+    position: relative;
+    
+    .progress {
+      position: sticky;
+      top: 0;
+      left: 0;
+      padding-top: 50px;
+      text-align: center;
+      color: rgb(49, 214, 154);
+      font-size: 36px;
+  
+      h1 {
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        margin: 10px 0;
+      }
+  
+      .progressBar {
+        height: 10px;
+        background-color: rgb(49, 214, 154);
+        transform-origin: left;
+      }
+    }
+  }
+  
