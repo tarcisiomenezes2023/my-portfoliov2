@@ -1,24 +1,24 @@
-import "./Project1.scss";
+import "./Project2.scss";
 import PropTypes from "prop-types";
 
 const items = [
   {
     id: 1,
-    title: "Working on right now...",
-    img: "/img/ApolloAI.png",
-    parag: "Introducing Apollo, your dedicated environmental engineering assistant! Apollo is designed to empower students with knowledge and support in the field of environmental engineering. With expertise in sustainable practices, waste management, water resources, and pollution control, Apollo is here to guide you through your studies, answer your questions, and provide valuable insights into creating a greener, more sustainable world.",
+    title: "Contact App",
+    img: "/img/Contact-app.jpg",
+    parag: "ContactApp is a simple and user-friendly application designed to manage and store contact information efficiently. With a clean and intuitive interface, users can easily add, edit, and delete contacts. Each contact entry includes essential details such as name, phone number, email address, and additional notes.",
   }
 ]
 
 const Single = ({ item }) => {
   return (
     <section>
-      <div className="container">
-        <div className="wrapper">
-          <div className="imageContainer">
+      <div className="container2">
+        <div className="wrapper2">
+          <div className="imageContainer2">
             <img src={item.img} alt="" />
           </div>
-          <div className="textContainer">
+          <div className="textContainer2">
             <h2>{item.title}</h2>
             <p>{item.parag}</p>
             <button>See on Github</button>
@@ -39,12 +39,12 @@ Single.propTypes = {
 };
 
 
-const Portfolio = () => {
+const Project2 = () => {
   return (
-    <section className="portfolio">
-      <div className="progress">
+    <section className="portfolio2">
+      <div className="progress2">
         <h1>Featured Works</h1>
-        <div className="progressBar"></div>
+        <div className="progressBar2"></div>
       </div>
       {items.map((item => (
         <Single item={item} key={item.id}/>
@@ -53,4 +53,4 @@ const Portfolio = () => {
   )
 };
 
-export default Portfolio;
+export default Project2;

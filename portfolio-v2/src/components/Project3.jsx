@@ -1,12 +1,12 @@
-import "./Project1.scss";
+import "./Project3.scss";
 import PropTypes from "prop-types";
 
 const items = [
   {
     id: 1,
-    title: "Working on right now...",
-    img: "/img/ApolloAI.png",
-    parag: "Introducing Apollo, your dedicated environmental engineering assistant! Apollo is designed to empower students with knowledge and support in the field of environmental engineering. With expertise in sustainable practices, waste management, water resources, and pollution control, Apollo is here to guide you through your studies, answer your questions, and provide valuable insights into creating a greener, more sustainable world.",
+    title: "SimpleCal",
+    img: "/img/Calendar-app.jpg",
+    parag: "SimpleCal is an easy-to-use calendar application designed to help you stay organized and manage your schedule efficiently. With a straightforward and intuitive interface, users can quickly add, edit, and delete events.",
   }
 ]
 
@@ -39,7 +39,7 @@ Single.propTypes = {
 };
 
 
-const Portfolio = () => {
+const Project3 = () => {
   return (
     <section className="portfolio">
       <div className="progress">
@@ -53,4 +53,4 @@ const Portfolio = () => {
   )
 };
 
-export default Portfolio;
+export default Project3;
