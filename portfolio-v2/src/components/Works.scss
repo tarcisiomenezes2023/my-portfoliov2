@@ -1,16 +1,29 @@
+@import "../app.scss";
+
 .textH1 {
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
 
     h1 {
         color: rgb(49, 214, 154);
         font-size: 40px;
         font-weight: bold;
-    
+
+        @include SmallTablet {
+            font-size: 25px;
+        }
+        @include MidMobile {
+            font-size: 18px;
+        }
+        @include SmallMobile {
+            padding-top: 150px;
+        }
     }
 }
+
 .container {
     height: calc(100vh);
     overflow: hidden;
@@ -23,6 +36,11 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        width: 100%;
+
+        @include SmallTablet {
+            flex-direction: column-reverse;
+        }
 
         .TextContainer {
             flex: 1;
@@ -31,36 +49,19 @@
             align-items: center;
             flex-direction: column;
             gap: 20px;
+            padding-bottom: 50px;
 
-            .Job1 {
+            @include MidTablet {
+                padding-bottom: 130px;
+            }
+
+            .Job1, .Job2, .Job3, .Job4 {
                 background-color: transparent;
                 color: white;
-                width: 70%;
+                width: 95%;
                 border-radius: 20px;
                 border: 3px solid white;
                 padding: 10px;
-                transition: 0.5s;
-                cursor: pointer;
-
-                &:hover {
-                    transform: scale(1.02);
-                }
-                
-                h2 {
-                    color: rgb(49, 214, 154);
-                    margin-bottom: 7px;
-                }
-                h5 {
-                    margin-bottom: 3px;
-                }
-            }
-            .Job2 {
-                background-color: transparent;
-                color: white;
-                width: 70%;
-                border-radius: 20px;
-                border: 3px solid white;
-                padding: 5px;
                 cursor: pointer;
                 transition: 0.5s;
 
@@ -76,60 +77,36 @@
                     margin-bottom: 3px;
                 }
             }
-            .Job3 {
-                background-color: transparent;
-                color: white;
-                width: 70%;
-                border-radius: 20px;
-                border: 3px solid white;
-                padding: 5px;
-                cursor: pointer;
-                transition: 0.5s;
-
-                &:hover {
-                    transform: scale(1.02);
-                }
-
-                h2 {
-                    color: rgb(49, 214, 154);
-                    margin-bottom: 7px;
-                }
-                h5 {
-                    margin-bottom: 3px;
-                }
-            }
-            .Job4 {
-                background-color: transparent;
-                color: white;
-                width: 70%;
-                border-radius: 20px;
-                border: 3px solid white;
-                padding: 5px;
-                cursor: pointer;
-                transition: 0.5s;
-
-                &:hover {
-                    transform: scale(1.02);
-                }
-
-                h2 {
-                    color: rgb(49, 214, 154);
-                    margin-bottom: 7px;
-                }
-                h5 {
-                    margin-bottom: 3px;
-                }
-            }
-
-        
         }
 
         .ThreeContainer {
             flex: 1;
-            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            height: 600px; /* Altura padrão */
+            max-width: 600px; /* Largura máxima padrão */
+            
+            @include tablet {
+                max-height: 350px; /* Altura em Small Tablet */
+                width: 350px; /* Largura máxima em Small Tablet */
+            }
+
+            @include MidMobile {
+                max-height: 250px; /* Altura em Mid Mobile */
+                width: 100%; /* Largura máxima em Mid Mobile */
+            }
+
+            @include SmallMobile {
+                max-height: 150px; /* Altura em Small Mobile */
+                max-width: 100%; /* Largura máxima em Small Mobile */
+            }
+
+            canvas {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

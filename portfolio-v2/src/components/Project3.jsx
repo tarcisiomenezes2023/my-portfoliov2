@@ -13,15 +13,17 @@ const items = [
 const Single = ({ item }) => {
   return (
     <section>
-      <div className="container">
-        <div className="wrapper">
-          <div className="imageContainer">
+      <div className="container2">
+        <div className="wrapper2">
+          <div className="imageContainer2">
             <img src={item.img} alt="" />
           </div>
-          <div className="textContainer">
+          <div className="textContainer2">
             <h2>{item.title}</h2>
             <p>{item.parag}</p>
+            <a href="https://github.com/tarcisiomenezes2023/calendar_app/tree/main/calendario-app/calender-app" target="blank">
             <button>See on Github</button>
+            </a>
           </div>
         </div>
       </div>
@@ -42,13 +44,10 @@ Single.propTypes = {
 const Project3 = () => {
   return (
     <section className="portfolio">
-      <div className="progress">
-        <h1>Featured Works</h1>
-        <div className="progressBar"></div>
-      </div>
-      {items.map((item => (
-        <Single item={item} key={item.id}/>
-      )))}
+      <div className="space2"></div>
+      {items.map(item => (
+        <Single item={item} key={item.id} />
+      ))}
     </section>
   )
 };

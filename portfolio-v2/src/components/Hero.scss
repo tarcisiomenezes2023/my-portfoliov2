@@ -1,7 +1,8 @@
+@import "../app.scss";
+
 .hero {
     height: calc(100vh - 100px);
     overflow: hidden;
-    background-color: rgb(3, 2, 22);
     position: relative;
     max-width: 1366px;
     margin: auto;
@@ -13,6 +14,14 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include desktop {
+        justify-content: space-around;
+    }
+      @include SmallTablet {
+      flex-direction: column-reverse;
+      height: 90%;
+    }
   
       .textContainer {
         display: flex;
@@ -20,19 +29,43 @@
         justify-content: center;
         gap: 20px;
         max-width: 380px;
+
+        @include tablet {
+          max-width: 300px;
+      }
+      @include SmallTablet {
+        width: 100%;
+      }
   
         h2 {
           font-size: 30px;
           color: white;
+
+          @include tablet {
+            font-size: 20px;
+        }
+        @include SmallTablet {
+          font-size: 30px;
+        }
+
         }
         h1 {
           color: rgb(67, 236, 174);
           font-size: 45px;
           font-weight: bolder;
+
+          @include tablet {
+            font-size: 35px;
+        }
+
         }
         span {
           color: white;
           font-size: 22px;
+
+          @include tablet {
+            font-size: 15px;
+        }
         }
   
         .buttons {
@@ -81,11 +114,16 @@
           left: 45%;
           width: 110%;
           height: 90%;
-          background: radial-gradient(circle, rgb(49, 214, 154), rgba(0, 0, 0, 0));
+          background: radial-gradient(circle, rgb(99, 108, 108), rgba(0, 0, 0, 0));
           border-radius: 50%;
           transform: translate(-50%, -50%);
           animation: pulsate 2s infinite;
           pointer-events: none;
+
+          @include desktop {
+            width: 95%;
+            height: 75%;
+        }
         }
   
         img {
@@ -93,6 +131,11 @@
           max-width: 350px;
           object-fit: contain;
           animation: animate 2s infinite ease alternate;
+
+          @include desktop {
+            max-width: 300px;
+            max-height: 450px;
+        }
         }
   
         @keyframes animate {

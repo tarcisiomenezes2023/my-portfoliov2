@@ -13,15 +13,17 @@ const items = [
 const Single = ({ item }) => {
   return (
     <section>
-      <div className="container2">
-        <div className="wrapper2">
-          <div className="imageContainer2">
+      <div className="container1">
+        <div className="wrapper1">
+          <div className="imageContainer1">
             <img src={item.img} alt="" />
           </div>
-          <div className="textContainer2">
+          <div className="textContainer1">
             <h2>{item.title}</h2>
             <p>{item.parag}</p>
+            <a href="https://github.com/tarcisiomenezes2023/contact-app" target="blank">
             <button>See on Github</button>
+            </a>
           </div>
         </div>
       </div>
@@ -41,14 +43,10 @@ Single.propTypes = {
 
 const Project2 = () => {
   return (
-    <section className="portfolio2">
-      <div className="progress2">
-        <h1>Featured Works</h1>
-        <div className="progressBar2"></div>
-      </div>
-      {items.map((item => (
-        <Single item={item} key={item.id}/>
-      )))}
+    <section className="portfolio">
+      {items.map(item => (
+        <Single item={item} key={item.id} />
+      ))}
     </section>
   )
 };

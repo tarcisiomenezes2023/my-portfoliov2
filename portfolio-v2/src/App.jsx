@@ -10,6 +10,9 @@ import "./app.scss";
 function App() {
   return (
     <div className="app-container">
+      <div className="background-container">
+        <img src="/img/background5.jpg" alt="background" className="background" />
+      </div>
       <section id="Homepage"> <Hero /> </section>
       <section id="Work"> <Work /> </section>
       <section id="Projects"> <Project1 /> </section>

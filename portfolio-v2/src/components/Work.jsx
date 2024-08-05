@@ -20,9 +20,9 @@ const createTexturedCanvas = (url, size) => {
       context.fillRect(0, 0, size, size);
 
       // Calcular novas dimensões da imagem (metade do tamanho do lado do cubo)
-      const newSize = size / 1.2;
-      const x = (size - newSize) / 1.2;
-      const y = (size - newSize) / 1.2;
+      const newSize = size / 1;
+      const x = (size - newSize) / 1;
+      const y = (size - newSize) / 1;
 
       // Desenhar imagem redimensionada e centralizada
       context.drawImage(img, x, y, newSize, newSize);
@@ -77,7 +77,7 @@ const ColoredBox = () => {
   return (
     <mesh 
       ref={meshRef} 
-      scale={[2.5, 2.5, 2.5]} 
+      scale={[1.5, 1.5, 1.5]}  // Ajuste de escala menor
       onPointerDown={handlePointerDown} 
       onPointerUp={handlePointerUp}
     >
@@ -127,7 +127,7 @@ const Work = () => {
             </motion.div>
             <motion.div className="Job3" variants={textVariants} initial="initial" animate="animate">
               <h2>Sales Assistant</h2>
-              <h5>Embalando Festas | Petrolina, Brazil</h5>
+              <h6>Embalando Festas | Petrolina, Brazil</h6>
               <h6>https://embalandofestas.com.br/ From Jan 2019 - Nov 2019</h6>
             </motion.div>
             <motion.div className="Job4" variants={textVariants} initial="initial" animate="animate">
