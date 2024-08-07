@@ -106,7 +106,7 @@ const textVariants = {
 
 const Work = () => {
   return (
-    <>
+      <div className="mainContainer">
       <motion.div className="textH1" variants={textVariants} initial="initial" animate="animate">
         <h1>Work Experience and Skills</h1>
       </motion.div>
@@ -146,7 +146,7 @@ const Work = () => {
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

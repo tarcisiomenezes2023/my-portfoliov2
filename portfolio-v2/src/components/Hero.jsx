@@ -1,5 +1,4 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import Navbar from "./Navbar";
 import "./Hero.scss";
 import { motion } from "framer-motion";
 
@@ -36,8 +35,6 @@ const Hero = () => {
   }
 
   return (
-    <>
-      <Navbar />
       <div className="hero">
         <div className="wrapper">
           <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
@@ -55,7 +52,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

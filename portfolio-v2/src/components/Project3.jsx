@@ -13,12 +13,12 @@ const items = [
 const Single = ({ item }) => {
   return (
     <section>
-      <div className="container2">
-        <div className="wrapper2">
-          <div className="imageContainer2">
+      <div className="container3">
+        <div className="wrapper3">
+          <div className="imageContainer3">
             <img src={item.img} alt="" />
           </div>
-          <div className="textContainer2">
+          <div className="textContainer3">
             <h2>{item.title}</h2>
             <p>{item.parag}</p>
             <a href="https://github.com/tarcisiomenezes2023/calendar_app/tree/main/calendario-app/calender-app" target="blank">

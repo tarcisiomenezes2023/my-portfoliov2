@@ -6,7 +6,7 @@ const items = [
     id: 1,
     title: "Contact App",
     img: "/img/Contact-app.jpg",
-    parag: "ContactApp is a simple and user-friendly application designed to manage and store contact information efficiently. With a clean and intuitive interface, users can easily add, edit, and delete contacts. Each contact entry includes essential details such as name, phone number, email address, and additional notes.",
+    parag: "ContactApp is a simple and user-friendly application designed to manage and store contact information efficiently. Made with React Native Expo Go.",
   }
 ]
 
@@ -39,7 +39,6 @@ Single.propTypes = {
     parag: PropTypes.string.isRequired,
   }).isRequired,
 };
-
 
 const Project2 = () => {
   return (

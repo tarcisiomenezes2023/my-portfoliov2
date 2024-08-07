@@ -2,6 +2,13 @@
 
 .portfolio {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  @include SmallTablet {
+    gap: 0;
+  }
 
   .progress {
     text-align: center;
@@ -21,6 +28,13 @@
       border-radius: 20px;
       width: 60%;
       margin: auto;
+
+      @include mobile {
+        width: 80%;
+      }
+      @include SmallMobile {
+        width: 90%;
+      }
     }
   }
 
@@ -43,7 +57,7 @@
 
       @include SmallTablet {
         flex-direction: column;
-        padding-top: 80px;
+        padding-top: 100px;
       }
 
       .imageContainer1 {
@@ -82,6 +96,11 @@
         flex-direction: column;
         gap: 30px;
 
+        @include MidTablet {
+          padding-top: 50px;
+          align-items: center;
+        }
+
         h2 {
           font-size: 54px;
           color: rgb(49, 214, 154);
@@ -92,6 +111,8 @@
 
           @include SmallTablet {
             font-size: 35px;
+            align-items: center;
+            justify-content: center;
           }
 
           @include mobile {

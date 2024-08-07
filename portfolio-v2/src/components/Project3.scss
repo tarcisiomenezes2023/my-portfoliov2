@@ -1,9 +1,8 @@
 @import "../app.scss";
 
 .portfolio {
-  position: relative;
 
-  .container2 {
+  .container3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +10,7 @@
     height: 100%;
     overflow: hidden;
 
-    .wrapper2 {
+    .wrapper3 {
       max-width: 1366px;
       height: 100%;
       margin: auto;
@@ -20,11 +19,13 @@
       align-items: center;
       justify-content: center;
 
-      @include MidMobile {
+      @include SmallTablet {
         flex-direction: column;
+        margin-top: 100px;
+        gap: 40px;
       }
 
-      .imageContainer2 {
+      .imageContainer3 {
         flex: 1;
         height: 100%;
         display: flex;
@@ -32,10 +33,10 @@
         justify-content: center;
 
         img {
-          width: auto; /* Ajuste a largura para 'auto' */
-          max-width: 100%; /* Limita a largura máxima */
-          height: auto; /* Ajuste a altura para 'auto' */
-          max-height: 70vh; /* Limita a altura máxima */
+          width: auto; 
+          max-width: 100%; 
+          height: auto; 
+          max-height: 70vh; 
 
           @include MidTablet {
             max-height: 60vh;
@@ -47,11 +48,15 @@
         }
       }
 
-      .textContainer2 {
+      .textContainer3 {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @include SmallTablet {
+          align-items: center;
+        }
 
         h2 {
           font-size: 54px;
