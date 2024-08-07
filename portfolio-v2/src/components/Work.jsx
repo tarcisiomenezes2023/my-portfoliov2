@@ -5,7 +5,6 @@ import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { motion } from "framer-motion";
 
-// Função para carregar e redimensionar a imagem com fundo branco
 const createTexturedCanvas = (url, size) => {
   return new Promise((resolve) => {
     const img = new Image();
@@ -15,16 +14,13 @@ const createTexturedCanvas = (url, size) => {
       canvas.width = size;
       canvas.height = size;
 
-      // Fundo branco
       context.fillStyle = 'white';
       context.fillRect(0, 0, size, size);
 
-      // Calcular novas dimensões da imagem (metade do tamanho do lado do cubo)
-      const newSize = size / 1;
-      const x = (size - newSize) / 1;
-      const y = (size - newSize) / 1;
+      const newSize = size / 1.2;
+      const x = (size - newSize) / 1.2;
+      const y = (size - newSize) / 1.2;
 
-      // Desenhar imagem redimensionada e centralizada
       context.drawImage(img, x, y, newSize, newSize);
 
       resolve(new THREE.CanvasTexture(canvas));
@@ -39,12 +35,12 @@ const ColoredBox = () => {
   useEffect(() => {
     const loadTextures = async () => {
       const textureUrls = [
-        '/img/js.png',  // Frente
-        '/img/react.png',  // Traseira
-        '/img/typescript.png',  // Superior
-        '/img/devops.png',  // Inferior
-        '/img/python.png',  // Esquerda
-        '/img/node.png'   // Direita
+        '/img/js.png',  
+        '/img/react.png',  
+        '/img/typescript.png',  
+        '/img/devops.png',  
+        '/img/python.png',  
+        '/img/node.png'   
       ];
       const loadedTextures = await Promise.all(textureUrls.map(url => createTexturedCanvas(url, 256)));
       setTextures(loadedTextures);
@@ -77,7 +73,7 @@ const ColoredBox = () => {
   return (
     <mesh 
       ref={meshRef} 
-      scale={[1.5, 1.5, 1.5]}  // Ajuste de escala menor
+      scale={[1.5, 1.5, 1.5]}  
       onPointerDown={handlePointerDown} 
       onPointerUp={handlePointerUp}
     >
@@ -89,16 +85,16 @@ const ColoredBox = () => {
   );
 };
 
-const textVariants = {
+const variants = {
   initial: {
-    x: -500,
+    x: -1000,
     opacity: 0,
   },
   animate: {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 2,
+      duration: 5,
       staggerChildren: 0.1,
     },
   },
@@ -106,37 +102,35 @@ const textVariants = {
 
 const Work = () => {
   return (
-      <div className="mainContainer">
-      <motion.div className="textH1" variants={textVariants} initial="initial" animate="animate">
+    <div className="mainContainer">
+      <motion.div className="textH1" variants={variants} initial="initial" animate="animate">
         <h1>Work Experience and Skills</h1>
       </motion.div>
       <div className="container">
         <div className="wrapper">
           <div className="TextContainer">
-            <motion.div className="Job1" variants={textVariants} initial="initial" animate="animate">
+            <motion.div className="Job1" variants={variants} initial="initial" animate="animate">
               <h2>Frontend Developer Intern</h2>
               <h5>ENGAGEathon | Remote/Freelancing</h5>
-              <h6>https://www.f6s.com/company/engageathon/
-              From Mar 2024 – Jun 2024</h6>
+              <h6>https://www.f6s.com/company/engageathon/ From Mar 2024 – Jun 2024</h6>
             </motion.div>
-            <motion.div className="Job2" variants={textVariants} initial="initial" animate="animate">
+            <motion.div className="Job2" variants={variants} initial="initial" animate="animate">
               <h2>Sales and IT support</h2>
               <h5>Mega Mix Construção | Petrolina, Brazil</h5>
-              <h6>https://www.instagram.com/mixdaconstrucaopnz/
-              From Nov 2019 – Jul 2022</h6>
+              <h6>https://www.instagram.com/mixdaconstrucaopnz/ From Nov 2019 – Jul 2022</h6>
             </motion.div>
-            <motion.div className="Job3" variants={textVariants} initial="initial" animate="animate">
+            <motion.div className="Job3" variants={variants} initial="initial" animate="animate">
               <h2>Sales Assistant</h2>
               <h6>Embalando Festas | Petrolina, Brazil</h6>
               <h6>https://embalandofestas.com.br/ From Jan 2019 - Nov 2019</h6>
             </motion.div>
-            <motion.div className="Job4" variants={textVariants} initial="initial" animate="animate">
+            <motion.div className="Job4" variants={variants} initial="initial" animate="animate">
               <h2>IT Support Intern</h2>
               <h5>Hospital Memorial Petrolina | Petrolina, Brazil</h5>
               <h6>https://hmp.com.br/ From Jan 2017 – Jan 2018</h6>
             </motion.div>
           </div>
-          <motion.div className="ThreeContainer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }}>
+          <motion.div className="ThreeContainer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 5 }}>
             <Canvas>
               <ambientLight intensity={2} />
               <pointLight position={[10, 10, 10]} />

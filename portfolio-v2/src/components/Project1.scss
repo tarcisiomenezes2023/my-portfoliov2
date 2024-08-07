@@ -96,16 +96,17 @@
         flex-direction: column;
         gap: 30px;
 
-        @include MidTablet {
+        @include SmallTablet {
           padding-top: 50px;
           align-items: center;
+          max-width: 80%;
         }
 
         h2 {
           font-size: 54px;
           color: rgb(49, 214, 154);
 
-          @include MidTablet {
+          @include SmallTablet {
             font-size: 40px;
           }
 
@@ -142,20 +143,22 @@
 
         button {
           border-radius: 10px;
-          border: none;
-          background-color: white;
+          border-color: white;
+          
           font-size: 20px;
           font-weight: 400;
           padding: 10px;
-          color: black;
+          color: white;
+          background-color: black;
           width: 200px;
           cursor: pointer;
           transition: 0.5s;
 
           &:hover {
-            background-color: rgb(49, 214, 154);
+            border-color: rgb(49, 214, 154);
+            border-style: double;
             transform: scale(1.02);
-            color: white;
+            color: rgb(49, 214, 154);
           }
 
           @include MidTablet {
