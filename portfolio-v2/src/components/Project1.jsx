@@ -56,7 +56,7 @@ Single.propTypes = {
     title: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     parag: PropTypes.string.isRequired,
-    link: PropTypes.link.isRequired,
+    link: PropTypes.string.isRequired,
   }).isRequired,
 };
 
