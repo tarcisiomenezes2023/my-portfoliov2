@@ -42,7 +42,7 @@ const Hero = () => {
             <h1>Tarcísio Menezes</h1>
             <span>{text} <Cursor cursorStyle="|" /></span>
             <div className="buttons">
-              <button>See the Latest Works</button>
+              <a href="https://github.com/tarcisiomenezes2023?tab=repositories" target="blank"><button>See the Latest Works</button></a>
               <button className="resume" onClick={handleDownloadCV}>Resume</button>
             </div>
           </motion.div>
