@@ -8,18 +8,21 @@ const items = [
     title: "Working on right now...",
     img: "/img/ApolloAI.png",
     parag: "Introducing Apollo, your dedicated environmental engineering assistant! Apollo is designed to empower students with knowledge and support in the field of environmental engineering. Apollo is in development with React 19, Node js and Clerk Auth.",
+    link: "https://github.com/tarcisiomenezes2023/Apollo_AI/tree/master/environmental_engineering_ai",
   },
   {
     id: 1,
     title: "Contact App",
     img: "/img/Contact-app.jpg",
     parag: "ContactApp is a simple and user-friendly application designed to manage and store contact information efficiently. Made with React Native Expo Go.",
+    link: "https://github.com/tarcisiomenezes2023/contact-app",
   },
   {
     id: 1,
     title: "SimpleCal",
     img: "/img/Calendar-app.jpg",
     parag: "SimpleCal is an easy-to-use calendar application designed to help you stay organized and manage your schedule efficiently. With a straightforward and intuitive interface, users can quickly add, edit, and delete events.",
+    link: "https://github.com/tarcisiomenezes2023/calendar_app",
   },
 ];
 
@@ -38,7 +41,7 @@ const Single = ({ item }) => (
         <div className="textContainer1">
           <h2>{item.title}</h2>
           <p>{item.parag}</p>
-          <a href="https://github.com/tarcisiomenezes2023/Apollo_AI/tree/master/environmental_engineering_ai" target="_blank" rel="noopener noreferrer">
+          <a href={item.link} target="blank">
             <button>See on Github</button>
           </a>
         </div>
@@ -53,6 +56,7 @@ Single.propTypes = {
     title: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     parag: PropTypes.string.isRequired,
+    link: PropTypes.link.isRequired,
   }).isRequired,
 };
 
