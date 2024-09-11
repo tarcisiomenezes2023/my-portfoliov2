@@ -30,7 +30,7 @@ const Hero = () => {
   });
 
   const handleDownloadCV = () => {
-    const CV = 'https://drive.google.com/file/d/16bManq_KUCw9gqjI1FZoGG2Ayxu6vh-A/view?usp=sharing';
+    const CV = 'https://drive.google.com/file/d/1YE5-FMXcaVACJMebVgIPDlsq9-sSQNA3/view?usp=sharing';
     window.open(CV, '_blank');
   }
 
